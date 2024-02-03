@@ -1226,7 +1226,7 @@ button {
 }
 
 .hero {
-    height: 46.3rem;
+    height: 77.3rem;
 }
 
 @media(max-width:767px) {
@@ -1253,16 +1253,29 @@ button {
     padding: 10px
 }
 
+.hero-slider-three::after,
+.hero-slider-two::after,
+.hero-slider-one::after {
+    background-color: rgba(21, 21, 21, 0.412);
+    content: '';
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
 .hero-slider-one {
-    background: url("../assets/images/homepage-one/Pillow_img/Pillow_slider_img_1.svg") no-repeat center/cover
+    background: url("../assets/images/homepage-one/home/slider_1.png") no-repeat center/cover
 }
 
 .hero-slider-two {
-    background: url("../assets/images/homepage-one/Pillow_img/Pillow_slider_img_2.svg") no-repeat center/cover
+    background: url("../assets/images/homepage-one/home/slider_2.png") no-repeat center/cover
 }
 
 .hero-slider-three {
-    background: url("../assets/images/homepage-one/Pillow_img/Pillow_slider_img_3.svg") no-repeat center/cover
+    background: url("../assets/images/homepage-one/home/slider_1.png") no-repeat center/cover
 }
 
 @media(max-width:767px) {
@@ -1765,7 +1778,7 @@ button {
 }
 
 .top-selling-section .product-wrapper .product-img img {
-    object-fit: cover
+    /* object-fit: cover */
 }
 
 .top-selling-section .product-wrapper .product-info {
@@ -5188,24 +5201,26 @@ table .ticket-row:hover {
 }
 
 .footesocialicon ul a {
-     width: 35px;
-     height: 35px;
-     position: relative;
-     background: #fff;
-     display: block;
-     text-align: center;
-     line-height: 35px;
-     border: 1px solid #fff;
-     color: #277190;
-     transition: all 0.5s;
-     border-radius: 2px;
- 
+    width: 35px;
+    height: 35px;
+    position: relative;
+    background: #fff;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid #fff;
+    color: #277190;
+    transition: all 0.5s;
+    border-radius: 2px;
+
 }
-.footesocialicon ul a:hover{
+
+.footesocialicon ul a:hover {
     background-color: transparent;
     color: #fff;
 }
-.fooercall_icon i{
+
+.fooercall_icon i {
     font-size: 22px;
     width: 40px;
     height: 40px;
@@ -5214,4 +5229,87 @@ table .ticket-row:hover {
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
+}
+
+.wrapper-info h1,
+.wrapper-info h2,
+.wrapper-info h5,
+.wrapper-info p {
+    color: #fff;
+    z-index: 999;
+}
+
+.testimonial-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.testimonial-img img {
+    border-radius: 50%;
+}
+
+.videocard iframe {
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.designyobtn {
+    padding: 1.2rem 3.4rem;
+    margin: 0;
+    text-align: center;
+    border-radius: 3rem;
+    display: inline-block;
+    background: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    position: relative;
+    color: #277190;
+    font-family: inter, sans-serif;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.designyobtn::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #232532;
+    position: absolute;
+    transition: all .4s ease-in-out;
+    right: 0;
+    top: 0;
+    z-index: -3;
+
+}
+.designyobtn:hover {
+    color: #fff;
+    background-color: #ffbb38;
+}
+.designyobtn:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+.offerbg{
+    background-color: #dbebf1!important;
+}
+.offerone::after{
+    position: absolute;
+    right: -59px;
+    content: '';
+    bottom: -87px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/images/homepage-one/Pillow_img/SeatPillow_Shadow-300x300.png);
+}
+.offertwo::after{
+    position: absolute;
+    right: -59px;
+    content: '';
+    bottom: -87px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../assets/images/homepage-one/Pillow_img/SleepPillow_Shadow-300x300.png);
 }
